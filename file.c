@@ -3,13 +3,16 @@
 
 void inserer(file** filei, int estampille, int sitePos){	
 
-	file* node = (file*)malloc(sizeof(file*));
+	file* node = (file*)malloc(sizeof(file));
 	node->estampille = estampille;
 	node->sitePos = sitePos;
+	node->next = NULL;
 
 	//Si file est vide on crée la file
 	if(*filei == NULL){
+		node->next = *filei;
 		*filei = node;
+		filei = &node;
 		return;
 	}
 

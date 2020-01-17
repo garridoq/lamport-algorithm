@@ -47,6 +47,7 @@ necessaire
 #include<fcntl.h>
 #include<netdb.h>
 #include<string.h>
+#include <errno.h>
 
 #include "file.h"
 #include "split.h"
@@ -176,6 +177,7 @@ void SendReq(char* req, char* Site,int Port){
 	memcpy(&sock_add_emis.sin_addr.s_addr, hp->h_addr, hp->h_length);
 
 	if (connect(s_emis, (struct sockaddr*) &sock_add_emis,size_sock)==-1) {
+		printf("%d\n",errno);
 		perror("SendReq : Connect");
 		exit(-1);
 	}
@@ -280,7 +282,7 @@ int main (int argc, char* argv[]) {
 			/*Extraction et affichage du message */
 			l=read(s_service,texte,39);
 			texte[l] ='\0';
-			printf("Message recu : %s\n",texte); fflush(0);
+			printf("\nMessage recu : %s\n",texte); fflush(0);
 			close (s_service);
 
 			//Format du message recu (envoyé par site j) "TYPE SitePos Estampille"
@@ -298,9 +300,9 @@ int main (int argc, char* argv[]) {
 			int sitePos = atoi(liste1[1]);
 			int estampille = atoi(liste1[2]);
 			
-			printf("type: |%s|\n",type);
-			printf("Pos: |%d|\n",sitePos);
-			printf("Estampille: |%d|\n",estampille);
+			//printf("type: |%s|\n",type);
+			//printf("Pos: |%d|\n",sitePos);
+			//printf("Estampille: |%d|\n",estampille);
 			//Mise à jour de H = max(H,estampille recue)
 			H = H > estampille ? H : estampille; 
 
@@ -308,26 +310,19 @@ int main (int argc, char* argv[]) {
 			//Verifier si tout le monde à répondu
 			// On entre en Sc si requête en tête de file
 			if(strcmp(type,"Reponse") == 0){
-				printf("On a recu une Reponse\n");
-				if(verifierNombreReponses(Reponses,NSites)==0){
-					printf("Reponses pas toutes recues\n");
-					continue;
-				}
-				if(verifierSiPremier(filei, Hreq,GetSitePos(NSites,argv))){
-					printf("On rentre en section critique\n");
-					Sc=1;
-					demandeSc=0;
-				}
+				printf("On a recu une Reponse: %s\n",texte);
+				Reponses[sitePos]=1;
+				printf("Reponses : (%d,%d,%d)\n",Reponses[0],Reponses[1],Reponses[2]);
 			}
 			//SI on recoit Requete
 			//Ajouter Requete dans file
 			else if(strcmp(type,"Requete") == 0){
 				printf("On a recu une Requete\n");
 				inserer(&filei, estampille, sitePos);
-							
+				printFile(filei);
 				char* req = buildRequete("Reponse",GetSitePos(NSites, argv),H);
 				printf("Sending back  \'%s\' to : %s, %d\n",req,argv[sitePos+2],atoi(argv[1])+sitePos); 	
-				SendReq(req,argv[sitePos+2],PortBase+sitePos);	
+				SendReq(req,argv[sitePos+2],atoi(argv[1])+sitePos);	
 				
 
 				free(req);
@@ -337,6 +332,8 @@ int main (int argc, char* argv[]) {
 			else if(strcmp(type,"Liberation") == 0){
 				printf("On a recu une Liberation\n");
 				retirer(&filei,estampille,sitePos);
+				printFile(filei);
+							
 			}
 
 
@@ -349,49 +346,78 @@ int main (int argc, char* argv[]) {
 
 
 		nanosleep((const struct timespec[]){{0, 100000000L}}, NULL);
+		
+		/*Rentrer en SC ? */
+		//printf("Reponses : (%d,%d,%d)\n",Reponses[0],Reponses[1],Reponses[2]);
+		if(verifierNombreReponses(Reponses,NSites)==1 && Sc==0){
+			//printf("Dois on rentrer en SC:\n");
+			//printFile(filei);
+			//printf("H: %d, Hreq: %d\n",H,Hreq);
+			if(verifierSiPremier(filei, Hreq,GetSitePos(NSites,argv))){
+				printf("\n=========================================================\n");
+				printf("=               Entree en section critique              =\n");
+				printf("=========================================================\n");
+				printf("On rentre en section critique\n");
+				Sc=1;
+				demandeSc=0;
+			}
+		}
 
 		/* Petite boucle d'attente : c'est ici que l'on peut faire des choses*/
 		r = rand()%100;
+		H++;
 		if(r < 50){
 			//On mange des pruneaux
-			H++;
 			printf("|");fflush(0);
 
 		}
-		else if(r<80 && Sc==1){
+		else if(r<90 && Sc==1){
 			//On veut sortir de section critique
-			printf("\nSortie de section critique\n");
+			printf("\n=========================================================\n");
+			printf("=               Sortie de section critique              =\n");
+			printf("=========================================================\n");
 
-			//TODO Envoyer Libération aux autres machines
+			// Envoyer Libération aux autres machines
 			char* req = buildRequete("Liberation",GetSitePos(NSites, argv),Hreq);
 
-			for(i=0;i<NSites-1;i++){
-				if(i != GetSitePos(NSites,argv))
-					SendReq(req,argv[3+i], atoi(argv[1])+i+1);
+			for(i=0;i<=NSites-1;i++){
+				printf("%d sur %d\n",i,NSites);
+				if(i != GetSitePos(NSites,argv)){
+					printf("Sending Liberation to %s, %d\n",argv[2+i], atoi(argv[1])+i);
+					SendReq(req,argv[2+i], atoi(argv[1])+i);
+				}
 			}
 			// retirer Requete de file
 			retirer(&filei, Hreq, GetSitePos(NSites, argv));
+			printFile(filei);
 			Sc=0;
 			demandeSc=0;
+			printf("Reset des reponses\n");
+			for(int j=0;j<NSites;++j){
+				Reponses[j] = 0;
+			}
 
 			free(req);
 		}
-		else if(demandeSc==0 && r>95){
+		else if(demandeSc==0 && Sc==0 && r>90){
 			// On veut ici faire la demande pour entrer en section critique
 			// Placer sa requete dans File i
-			//TODO envoyer Requete aux autres machines
+			// envoyer Requete aux autres machines
 			char* req = buildRequete("Requete",GetSitePos(NSites, argv),H);
 			Hreq = H;
-			demandeSc=1;	
+			demandeSc=1;
+			Reponses[GetSitePos(NSites, argv)] = 1;
 			printf("\nDemande d'entree en section critique\n");
+			printFile(filei);
 			inserer(&filei,Hreq,GetSitePos(NSites,argv));
 			printFile(filei);
 			//Envoi requete
 			for(i=0;i<=NSites-1;i++){
 				printf("%d sur %d\n",i,NSites);
 				if(i != GetSitePos(NSites,argv)){
-					SendReq(req,argv[3+i], atoi(argv[1])+i+1);
-					printf("Sending\n");
+					SendReq(req,argv[2+i], atoi(argv[1])+i);
+
+					printf("Sending to %s, %d\n",argv[2+i], atoi(argv[1])+i);
 				}
 			}
 
