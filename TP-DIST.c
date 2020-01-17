@@ -151,6 +151,41 @@ void SendSync(char *Site, int Port) {
 	close (s_emis); 
 }
 
+/*Envoi d'une requete vers une machine*/
+void SendReq(char* req, char* Site,int Port){
+	struct hostent* hp;
+	int s_emis;
+	struct sockaddr_in sock_add_emis;
+	int size_sock;
+	int l;
+
+	if ( (s_emis=socket(AF_INET, SOCK_STREAM,0))==-1) {
+		perror("SendReq : Creation socket");
+		exit(-1);
+	}
+
+	hp = gethostbyname(Site);
+	if (hp == NULL) {
+		perror("SendReq: Gethostbyname");
+		exit(-1);
+	}
+
+	size_sock=sizeof(struct sockaddr_in);
+	sock_add_emis.sin_family = AF_INET;
+	sock_add_emis.sin_port = htons(Port);
+	memcpy(&sock_add_emis.sin_addr.s_addr, hp->h_addr, hp->h_length);
+
+	if (connect(s_emis, (struct sockaddr*) &sock_add_emis,size_sock)==-1) {
+		perror("SendReq : Connect");
+		exit(-1);
+	}
+
+	/*Emission de la requete*/
+	l=write(s_emis,req,strlen(req));
+	close (s_emis); 
+
+}
+
 /***********************************************************************/
 /***********************************************************************/
 /***********************************************************************/
@@ -191,6 +226,8 @@ int main (int argc, char* argv[]) {
 	/*CREATION&BINDING DE LA SOCKET DE CE SITE*/
 	PortBase=atoi(argv[1])+GetSitePos(NSites, argv);
 	printf("Numero de port de ce site %d\n",PortBase);
+	
+	srand(PortBase);
 
 	sock_add.sin_family = AF_INET;
 	sock_add.sin_addr.s_addr= htons(INADDR_ANY);  
@@ -284,11 +321,16 @@ int main (int argc, char* argv[]) {
 			}
 			//SI on recoit Requete
 			//Ajouter Requete dans file
-			//TODO envoyer Reponse à l'envoyeur de Requete
 			else if(strcmp(type,"Requete") == 0){
 				printf("On a recu une Requete\n");
 				inserer(&filei, estampille, sitePos);
+							
+				char* req = buildRequete("Reponse",GetSitePos(NSites, argv),H);
+				printf("Sending back  \'%s\' to : %s, %d\n",req,argv[sitePos+2],atoi(argv[1])+sitePos); 	
+				SendReq(req,argv[sitePos+2],PortBase+sitePos);	
+				
 
+				free(req);
 			}
 			//SI on recoit Liberation
 			//Enlever Requete (il va falloir retrouver Requete, peut être passée avec Libé ?) ed file
@@ -323,6 +365,10 @@ int main (int argc, char* argv[]) {
 			//TODO Envoyer Libération aux autres machines
 			char* req = buildRequete("Liberation",GetSitePos(NSites, argv),Hreq);
 
+			for(i=0;i<NSites-1;i++){
+				if(i != GetSitePos(NSites,argv))
+					SendReq(req,argv[3+i], atoi(argv[1])+i+1);
+			}
 			// retirer Requete de file
 			retirer(&filei, Hreq, GetSitePos(NSites, argv));
 			Sc=0;
@@ -330,7 +376,7 @@ int main (int argc, char* argv[]) {
 
 			free(req);
 		}
-		else if(demandeSc==0){
+		else if(demandeSc==0 && r>95){
 			// On veut ici faire la demande pour entrer en section critique
 			// Placer sa requete dans File i
 			//TODO envoyer Requete aux autres machines
@@ -341,6 +387,13 @@ int main (int argc, char* argv[]) {
 			inserer(&filei,Hreq,GetSitePos(NSites,argv));
 			printFile(filei);
 			//Envoi requete
+			for(i=0;i<=NSites-1;i++){
+				printf("%d sur %d\n",i,NSites);
+				if(i != GetSitePos(NSites,argv)){
+					SendReq(req,argv[3+i], atoi(argv[1])+i+1);
+					printf("Sending\n");
+				}
+			}
 
 			free(req);
 		}
