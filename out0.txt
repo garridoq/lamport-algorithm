@@ -1,0 +1,1098 @@
+Numero de port de ce site 25565
+WaitSync : **SYNCHRO**
+WaitSync : **SYNCHRO**
+Toutes les synchros recues 
+..
+Message recu : Requete 1 1
+File apres la demande : (Time: 1,Site: 1)
+Message envoye : Reponse 0 2 vers pc5201a, 25566
+-.-.
+Message recu : Requete 2 3
+File apres la demande : (Time: 1,Site: 1) -> (Time: 3,Site: 2)
+Message envoye : Reponse 0 4 vers pc5201m, 25567
+-.-.-.-.-.-.
+Demande d'entree en section critique
+File apres la demande : (Time: 1,Site: 1) -> (Time: 3,Site: 2) -> (Time: 11,Site: 0)
+Message envoye : Requete 0 11 vers pc5201a, 25566
+Message envoye : Requete 0 11 vers pc5201m, 25567
+..
+Message recu : Reponse 1 11
+-.
+Message recu : Reponse 2 12
+.-..
+Message recu : Liberation 1 1
+File apres la libe: (Time: 3,Site: 2) -> (Time: 11,Site: 0)
+.-.-.-.-.
+Message recu : Requete 1 19
+File apres la demande : (Time: 3,Site: 2) -> (Time: 11,Site: 0) -> (Time: 19,Site: 1)
+Message envoye : Reponse 0 21 vers pc5201a, 25566
+-...-.-.-.-.-.-.-.-..-.-...-..-.-..-....-..-....-.-.-...-.-.-......-.-.
+Message recu : Liberation 2 3
+File apres la libe: (Time: 11,Site: 0) -> (Time: 19,Site: 1)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+.|.
+Message recu : Requete 2 69
+File apres la demande : (Time: 11,Site: 0) -> (Time: 19,Site: 1) -> (Time: 69,Site: 2)
+Message envoye : Reponse 0 69 vers pc5201m, 25567
+.|.|.|...|...|.|.|.|..|.....|...|.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 11 vers pc5201a, 25566
+Message envoye : Liberation 0 11 vers pc5201m, 25567
+File apres la sortie : (Time: 19,Site: 1) -> (Time: 69,Site: 2)
+..-.-.
+Demande d'entree en section critique
+File apres la demande : (Time: 19,Site: 1) -> (Time: 69,Site: 2) -> (Time: 97,Site: 0)
+Message envoye : Requete 0 97 vers pc5201a, 25566
+Message envoye : Requete 0 97 vers pc5201m, 25567
+.-.
+Message recu : Reponse 1 97
+.
+Message recu : Reponse 2 98
+..
+Message recu : Liberation 1 19
+File apres la libe: (Time: 69,Site: 2) -> (Time: 97,Site: 0)
+-.-..-..
+Message recu : Requete 1 104
+File apres la demande : (Time: 69,Site: 2) -> (Time: 97,Site: 0) -> (Time: 104,Site: 1)
+Message envoye : Reponse 0 106 vers pc5201a, 25566
+-.-.-...-.-...-..-.-.-...-.-.-..-..-.-...-..-.-.-..
+Message recu : Liberation 2 69
+File apres la libe: (Time: 97,Site: 0) -> (Time: 104,Site: 1)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+..
+Message recu : Requete 2 140
+File apres la demande : (Time: 97,Site: 0) -> (Time: 104,Site: 1) -> (Time: 140,Site: 2)
+Message envoye : Reponse 0 140 vers pc5201m, 25567
+.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 97 vers pc5201a, 25566
+Message envoye : Liberation 0 97 vers pc5201m, 25567
+File apres la sortie : (Time: 104,Site: 1) -> (Time: 140,Site: 2)
+.
+Demande d'entree en section critique
+File apres la demande : (Time: 104,Site: 1) -> (Time: 140,Site: 2) -> (Time: 143,Site: 0)
+Message envoye : Requete 0 143 vers pc5201a, 25566
+Message envoye : Requete 0 143 vers pc5201m, 25567
+..
+Message recu : Reponse 1 143
+.
+Message recu : Reponse 2 144
+.....-.-.-.-.
+Message recu : Liberation 1 104
+File apres la libe: (Time: 140,Site: 2) -> (Time: 143,Site: 0)
+.-.-.-.-.
+Message recu : Requete 1 158
+File apres la demande : (Time: 140,Site: 2) -> (Time: 143,Site: 0) -> (Time: 158,Site: 1)
+Message envoye : Reponse 0 159 vers pc5201a, 25566
+...-..-.-....-.-...-.
+Message recu : Liberation 2 140
+File apres la libe: (Time: 143,Site: 0) -> (Time: 158,Site: 1)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|..
+Message recu : Requete 2 176
+File apres la demande : (Time: 143,Site: 0) -> (Time: 158,Site: 1) -> (Time: 176,Site: 2)
+Message envoye : Reponse 0 176 vers pc5201m, 25567
+|..
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 143 vers pc5201a, 25566
+Message envoye : Liberation 0 143 vers pc5201m, 25567
+File apres la sortie : (Time: 158,Site: 1) -> (Time: 176,Site: 2)
+...-..
+Demande d'entree en section critique
+File apres la demande : (Time: 158,Site: 1) -> (Time: 176,Site: 2) -> (Time: 184,Site: 0)
+Message envoye : Requete 0 184 vers pc5201a, 25566
+Message envoye : Requete 0 184 vers pc5201m, 25567
+.-.
+Message recu : Reponse 1 184
+-.
+Message recu : Reponse 2 185
+.-...-..-.-.-..-.....-..-.-.-.-..-..-....-...-..-...-.-..-.-.-.-.-..-.-..-..-....-...-.-.-...-.-.
+Message recu : Liberation 1 158
+File apres la libe: (Time: 176,Site: 2) -> (Time: 184,Site: 0)
+-.
+Message recu : Liberation 2 176
+File apres la libe: (Time: 184,Site: 0)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|.
+Message recu : Requete 2 252
+File apres la demande : (Time: 184,Site: 0) -> (Time: 252,Site: 2)
+Message envoye : Reponse 0 252 vers pc5201m, 25567
+.
+Message recu : Requete 1 250
+File apres la demande : (Time: 184,Site: 0) -> (Time: 250,Site: 1) -> (Time: 252,Site: 2)
+Message envoye : Reponse 0 253 vers pc5201a, 25566
+
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 184 vers pc5201a, 25566
+Message envoye : Liberation 0 184 vers pc5201m, 25567
+File apres la sortie : (Time: 250,Site: 1) -> (Time: 252,Site: 2)
+.-..
+Demande d'entree en section critique
+File apres la demande : (Time: 250,Site: 1) -> (Time: 252,Site: 2) -> (Time: 257,Site: 0)
+Message envoye : Requete 0 257 vers pc5201a, 25566
+Message envoye : Requete 0 257 vers pc5201m, 25567
+..
+Message recu : Reponse 2 258
+.
+Message recu : Reponse 1 257
+-..-.-.
+Message recu : Liberation 1 250
+File apres la libe: (Time: 252,Site: 2) -> (Time: 257,Site: 0)
+..-.
+Message recu : Requete 1 264
+File apres la demande : (Time: 252,Site: 2) -> (Time: 257,Site: 0) -> (Time: 264,Site: 1)
+Message envoye : Reponse 0 266 vers pc5201a, 25566
+.-...-.-.-.-.-.-..-.-...-..-....-.-.-....-.-.-.-.-.-.-.-..-..-..-.-..
+Message recu : Liberation 2 252
+File apres la libe: (Time: 257,Site: 0) -> (Time: 264,Site: 1)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+.
+Message recu : Requete 2 310
+File apres la demande : (Time: 257,Site: 0) -> (Time: 264,Site: 1) -> (Time: 310,Site: 2)
+Message envoye : Reponse 0 310 vers pc5201m, 25567
+.|.|.|..|.|.|..|.|..|.|...|..|...|...|.|...|...|..|...|.|...|...|....|..|.|.|..|...|..
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 257 vers pc5201a, 25566
+Message envoye : Liberation 0 257 vers pc5201m, 25567
+File apres la sortie : (Time: 264,Site: 1) -> (Time: 310,Site: 2)
+.-.-..
+Message recu : Liberation 1 264
+File apres la libe: (Time: 310,Site: 2)
+.-.-..-.
+Demande d'entree en section critique
+File apres la demande : (Time: 310,Site: 2) -> (Time: 378,Site: 0)
+Message envoye : Requete 0 378 vers pc5201a, 25566
+Message envoye : Requete 0 378 vers pc5201m, 25567
+.-.
+Message recu : Reponse 1 378
+.
+Message recu : Reponse 2 379
+..-..-.-..-...
+Message recu : Requete 1 389
+File apres la demande : (Time: 310,Site: 2) -> (Time: 378,Site: 0) -> (Time: 389,Site: 1)
+Message envoye : Reponse 0 390 vers pc5201a, 25566
+-..-..-.-.
+Message recu : Liberation 2 310
+File apres la libe: (Time: 378,Site: 0) -> (Time: 389,Site: 1)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|....|.
+Message recu : Requete 2 401
+File apres la demande : (Time: 378,Site: 0) -> (Time: 389,Site: 1) -> (Time: 401,Site: 2)
+Message envoye : Reponse 0 401 vers pc5201m, 25567
+....|.|.|.|.|..|.|..
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 378 vers pc5201a, 25566
+Message envoye : Liberation 0 378 vers pc5201m, 25567
+File apres la sortie : (Time: 389,Site: 1) -> (Time: 401,Site: 2)
+.-..
+Message recu : Liberation 1 389
+File apres la libe: (Time: 401,Site: 2)
+-.-.-.-.
+Message recu : Requete 1 420
+File apres la demande : (Time: 401,Site: 2) -> (Time: 420,Site: 1)
+Message envoye : Reponse 0 421 vers pc5201a, 25566
+-..
+Message recu : Liberation 2 401
+File apres la libe: (Time: 420,Site: 1)
+
+Demande d'entree en section critique
+File apres la demande : (Time: 420,Site: 1) -> (Time: 424,Site: 0)
+Message envoye : Requete 0 424 vers pc5201a, 25566
+Message envoye : Requete 0 424 vers pc5201m, 25567
+.
+Message recu : Requete 2 424
+File apres la demande : (Time: 420,Site: 1) -> (Time: 424,Site: 0) -> (Time: 424,Site: 2)
+Message envoye : Reponse 0 424 vers pc5201m, 25567
+.
+Message recu : Reponse 2 425
+-.
+Message recu : Reponse 1 425
+-..-..-.-.-...-.
+Message recu : Liberation 1 420
+File apres la libe: (Time: 424,Site: 0) -> (Time: 424,Site: 2)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|.
+Message recu : Requete 1 436
+File apres la demande : (Time: 424,Site: 0) -> (Time: 424,Site: 2) -> (Time: 436,Site: 1)
+Message envoye : Reponse 0 437 vers pc5201a, 25566
+..|..|.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 424 vers pc5201a, 25566
+Message envoye : Liberation 0 424 vers pc5201m, 25567
+File apres la sortie : (Time: 424,Site: 2) -> (Time: 436,Site: 1)
+.
+Demande d'entree en section critique
+File apres la demande : (Time: 424,Site: 2) -> (Time: 436,Site: 1) -> (Time: 444,Site: 0)
+Message envoye : Requete 0 444 vers pc5201a, 25566
+Message envoye : Requete 0 444 vers pc5201m, 25567
+.-.
+Message recu : Reponse 1 444
+.
+Message recu : Reponse 2 445
+-.
+Message recu : Liberation 2 424
+File apres la libe: (Time: 436,Site: 1) -> (Time: 444,Site: 0)
+-.
+Message recu : Requete 2 448
+File apres la demande : (Time: 436,Site: 1) -> (Time: 444,Site: 0) -> (Time: 448,Site: 2)
+Message envoye : Reponse 0 448 vers pc5201m, 25567
+..-..
+Message recu : Liberation 1 436
+File apres la libe: (Time: 444,Site: 0) -> (Time: 448,Site: 2)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+..|.|..|..|.|.|.|..|.
+Message recu : Requete 1 463
+File apres la demande : (Time: 444,Site: 0) -> (Time: 448,Site: 2) -> (Time: 463,Site: 1)
+Message envoye : Reponse 0 465 vers pc5201a, 25566
+.|...|.|.|..|.|.|..
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 444 vers pc5201a, 25566
+Message envoye : Liberation 0 444 vers pc5201m, 25567
+File apres la sortie : (Time: 448,Site: 2) -> (Time: 463,Site: 1)
+..-....
+Demande d'entree en section critique
+File apres la demande : (Time: 448,Site: 2) -> (Time: 463,Site: 1) -> (Time: 484,Site: 0)
+Message envoye : Requete 0 484 vers pc5201a, 25566
+Message envoye : Requete 0 484 vers pc5201m, 25567
+.-.
+Message recu : Reponse 2 485
+.
+Message recu : Reponse 1 484
+.-....-.-.....-...-.
+Message recu : Liberation 2 448
+File apres la libe: (Time: 463,Site: 1) -> (Time: 484,Site: 0)
+-.-.
+Message recu : Liberation 1 463
+File apres la libe: (Time: 484,Site: 0)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+.|.
+Message recu : Requete 1 501
+File apres la demande : (Time: 484,Site: 0) -> (Time: 501,Site: 1)
+Message envoye : Reponse 0 505 vers pc5201a, 25566
+.|.....|.|..|..|...
+Message recu : Requete 2 519
+File apres la demande : (Time: 484,Site: 0) -> (Time: 501,Site: 1) -> (Time: 519,Site: 2)
+Message envoye : Reponse 0 519 vers pc5201m, 25567
+.|.|..|...|..|..|.|...|.|....|..|.|.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 484 vers pc5201a, 25566
+Message envoye : Liberation 0 484 vers pc5201m, 25567
+File apres la sortie : (Time: 501,Site: 1) -> (Time: 519,Site: 2)
+.-.-.-.-...-..
+Message recu : Liberation 1 501
+File apres la libe: (Time: 519,Site: 2)
+
+Demande d'entree en section critique
+File apres la demande : (Time: 519,Site: 2) -> (Time: 553,Site: 0)
+Message envoye : Requete 0 553 vers pc5201a, 25566
+Message envoye : Requete 0 553 vers pc5201m, 25567
+.-.
+Message recu : Reponse 2 554
+.
+Message recu : Reponse 1 553
+-.-.
+Message recu : Requete 1 555
+File apres la demande : (Time: 519,Site: 2) -> (Time: 553,Site: 0) -> (Time: 555,Site: 1)
+Message envoye : Reponse 0 557 vers pc5201a, 25566
+-.-....-.-...-.-...-...-..-.-.-.-.-..-..-.-.-.-.-..-.-..-...-.-...-.....-..-.-..-.-.-.-.-.-.-..-.-.....-.-.-..-.-.-.-.-.
+Message recu : Liberation 2 519
+File apres la libe: (Time: 553,Site: 0) -> (Time: 555,Site: 1)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+...|.|.|.|.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 553 vers pc5201a, 25566
+Message envoye : Liberation 0 553 vers pc5201m, 25567
+File apres la sortie : (Time: 555,Site: 1)
+.-.
+Demande d'entree en section critique
+File apres la demande : (Time: 555,Site: 1) -> (Time: 642,Site: 0)
+Message envoye : Requete 0 642 vers pc5201a, 25566
+Message envoye : Requete 0 642 vers pc5201m, 25567
+.
+Message recu : Liberation 1 555
+File apres la libe: (Time: 642,Site: 0)
+.
+Message recu : Requete 2 642
+File apres la demande : (Time: 642,Site: 0) -> (Time: 642,Site: 2)
+Message envoye : Reponse 0 643 vers pc5201m, 25567
+.
+Message recu : Reponse 2 643
+-.
+Message recu : Reponse 1 643
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|.|.|..
+Message recu : Requete 1 648
+File apres la demande : (Time: 642,Site: 0) -> (Time: 642,Site: 2) -> (Time: 648,Site: 1)
+Message envoye : Reponse 0 649 vers pc5201a, 25566
+......|.|.|.|..|.|.|..|.|....|.|.|...|....|...|....|.|.|.|.|.|.|.|.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 642 vers pc5201a, 25566
+Message envoye : Liberation 0 642 vers pc5201m, 25567
+File apres la sortie : (Time: 642,Site: 2) -> (Time: 648,Site: 1)
+..-.-.-.
+Demande d'entree en section critique
+File apres la demande : (Time: 642,Site: 2) -> (Time: 648,Site: 1) -> (Time: 699,Site: 0)
+Message envoye : Requete 0 699 vers pc5201a, 25566
+Message envoye : Requete 0 699 vers pc5201m, 25567
+..
+Message recu : Reponse 1 699
+.
+Message recu : Reponse 2 700
+-.-.-..-.-.-.-....-.-.-.-.-...-.-..-.-...-.-...-.-.-.-.-..-.-.-.-.-..-....-..-..-..-.-.
+Message recu : Liberation 2 642
+File apres la libe: (Time: 648,Site: 1) -> (Time: 699,Site: 0)
+.
+Message recu : Requete 2 755
+File apres la demande : (Time: 648,Site: 1) -> (Time: 699,Site: 0) -> (Time: 755,Site: 2)
+Message envoye : Reponse 0 755 vers pc5201m, 25567
+..
+Message recu : Liberation 1 648
+File apres la libe: (Time: 699,Site: 0) -> (Time: 755,Site: 2)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+...|.|.
+Message recu : Requete 1 761
+File apres la demande : (Time: 699,Site: 0) -> (Time: 755,Site: 2) -> (Time: 761,Site: 1)
+Message envoye : Reponse 0 762 vers pc5201a, 25566
+.|..|.|.|..|.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 699 vers pc5201a, 25566
+Message envoye : Liberation 0 699 vers pc5201m, 25567
+File apres la sortie : (Time: 755,Site: 2) -> (Time: 761,Site: 1)
+.-.
+Demande d'entree en section critique
+File apres la demande : (Time: 755,Site: 2) -> (Time: 761,Site: 1) -> (Time: 773,Site: 0)
+Message envoye : Requete 0 773 vers pc5201a, 25566
+Message envoye : Requete 0 773 vers pc5201m, 25567
+..
+Message recu : Reponse 1 773
+-.
+Message recu : Reponse 2 774
+....-..-..-.-...-.-.-.....
+Message recu : Liberation 2 755
+File apres la libe: (Time: 761,Site: 1) -> (Time: 773,Site: 0)
+-..-..
+Message recu : Requete 2 798
+File apres la demande : (Time: 761,Site: 1) -> (Time: 773,Site: 0) -> (Time: 798,Site: 2)
+Message envoye : Reponse 0 798 vers pc5201m, 25567
+.-.
+Message recu : Liberation 1 761
+File apres la libe: (Time: 773,Site: 0) -> (Time: 798,Site: 2)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+.|.|..|...|...|....
+Message recu : Requete 1 813
+File apres la demande : (Time: 773,Site: 0) -> (Time: 798,Site: 2) -> (Time: 813,Site: 1)
+Message envoye : Reponse 0 814 vers pc5201a, 25566
+..|.|..|.|.|.|.|...|.|.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 773 vers pc5201a, 25566
+Message envoye : Liberation 0 773 vers pc5201m, 25567
+File apres la sortie : (Time: 798,Site: 2) -> (Time: 813,Site: 1)
+.-.-.-.
+Demande d'entree en section critique
+File apres la demande : (Time: 798,Site: 2) -> (Time: 813,Site: 1) -> (Time: 833,Site: 0)
+Message envoye : Requete 0 833 vers pc5201a, 25566
+Message envoye : Requete 0 833 vers pc5201m, 25567
+..
+Message recu : Reponse 1 833
+-.
+Message recu : Reponse 2 834
+.-..-...-..-.-..-....-.-..-...-..
+Message recu : Liberation 2 798
+File apres la libe: (Time: 813,Site: 1) -> (Time: 833,Site: 0)
+-.
+Message recu : Liberation 1 813
+File apres la libe: (Time: 833,Site: 0)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|.|..
+Message recu : Requete 2 862
+File apres la demande : (Time: 833,Site: 0) -> (Time: 862,Site: 2)
+Message envoye : Reponse 0 862 vers pc5201m, 25567
+..|.|.
+Message recu : Requete 1 865
+File apres la demande : (Time: 833,Site: 0) -> (Time: 862,Site: 2) -> (Time: 865,Site: 1)
+Message envoye : Reponse 0 866 vers pc5201a, 25566
+|.|.|.|.|...|..|.|..|.|.|...|.|.|.|...|..
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 833 vers pc5201a, 25566
+Message envoye : Liberation 0 833 vers pc5201m, 25567
+File apres la sortie : (Time: 862,Site: 2) -> (Time: 865,Site: 1)
+.
+Demande d'entree en section critique
+File apres la demande : (Time: 862,Site: 2) -> (Time: 865,Site: 1) -> (Time: 893,Site: 0)
+Message envoye : Requete 0 893 vers pc5201a, 25566
+Message envoye : Requete 0 893 vers pc5201m, 25567
+..
+Message recu : Liberation 2 862
+File apres la libe: (Time: 865,Site: 1) -> (Time: 893,Site: 0)
+.
+Message recu : Reponse 2 894
+.
+Message recu : Reponse 1 893
+-.
+Message recu : Requete 2 897
+File apres la demande : (Time: 865,Site: 1) -> (Time: 893,Site: 0) -> (Time: 897,Site: 2)
+Message envoye : Reponse 0 897 vers pc5201m, 25567
+.-..-..-.-.-..-..-...
+Message recu : Liberation 1 865
+File apres la libe: (Time: 893,Site: 0) -> (Time: 897,Site: 2)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+.
+Message recu : Requete 1 911
+File apres la demande : (Time: 893,Site: 0) -> (Time: 897,Site: 2) -> (Time: 911,Site: 1)
+Message envoye : Reponse 0 912 vers pc5201a, 25566
+.|....|...|.|....|....|...|...|.|..|..|..|.|...
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 893 vers pc5201a, 25566
+Message envoye : Liberation 0 893 vers pc5201m, 25567
+File apres la sortie : (Time: 897,Site: 2) -> (Time: 911,Site: 1)
+..-.-.
+Demande d'entree en section critique
+File apres la demande : (Time: 897,Site: 2) -> (Time: 911,Site: 1) -> (Time: 951,Site: 0)
+Message envoye : Requete 0 951 vers pc5201a, 25566
+Message envoye : Requete 0 951 vers pc5201m, 25567
+.-.
+Message recu : Reponse 2 952
+.
+Message recu : Reponse 1 951
+-.
+Message recu : Liberation 2 897
+File apres la libe: (Time: 911,Site: 1) -> (Time: 951,Site: 0)
+-..
+Message recu : Requete 2 956
+File apres la demande : (Time: 911,Site: 1) -> (Time: 951,Site: 0) -> (Time: 956,Site: 2)
+Message envoye : Reponse 0 956 vers pc5201m, 25567
+-.-.-.....-.-.-.-...-.-.-.-..-.-..-.-..-.-.-.-.-.-....-..-..
+Message recu : Liberation 1 911
+File apres la libe: (Time: 951,Site: 0) -> (Time: 956,Site: 2)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+.|..
+Message recu : Requete 1 994
+File apres la demande : (Time: 951,Site: 0) -> (Time: 956,Site: 2) -> (Time: 994,Site: 1)
+Message envoye : Reponse 0 996 vers pc5201a, 25566
+|.|.|...|.|.|.|.|..|...|....|.|..|.|.|..|.|.|..|.|...|.|..|..|..|.|.|.|..|.|..|.|.|.|.|...
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 951 vers pc5201a, 25566
+Message envoye : Liberation 0 951 vers pc5201m, 25567
+File apres la sortie : (Time: 956,Site: 2) -> (Time: 994,Site: 1)
+.-.
+Demande d'entree en section critique
+File apres la demande : (Time: 956,Site: 2) -> (Time: 994,Site: 1) -> (Time: 1054,Site: 0)
+Message envoye : Requete 0 1054 vers pc5201a, 25566
+Message envoye : Requete 0 1054 vers pc5201m, 25567
+..
+Message recu : Reponse 2 1055
+.
+Message recu : Reponse 1 1054
+-.-.-..-.-.-...-...-...-.-..-.-....-..-.......-.-....-..
+Message recu : Liberation 2 956
+File apres la libe: (Time: 994,Site: 1) -> (Time: 1054,Site: 0)
+.-.-.-.
+Message recu : Liberation 1 994
+File apres la libe: (Time: 1054,Site: 0)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|.|..|.|.|..|.
+Message recu : Requete 2 1107
+File apres la demande : (Time: 1054,Site: 0) -> (Time: 1107,Site: 2)
+Message envoye : Reponse 0 1107 vers pc5201m, 25567
+|.
+Message recu : Requete 1 1105
+File apres la demande : (Time: 1054,Site: 0) -> (Time: 1105,Site: 1) -> (Time: 1107,Site: 2)
+Message envoye : Reponse 0 1108 vers pc5201a, 25566
+...|....|.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 1054 vers pc5201a, 25566
+Message envoye : Liberation 0 1054 vers pc5201m, 25567
+File apres la sortie : (Time: 1105,Site: 1) -> (Time: 1107,Site: 2)
+.-.
+Demande d'entree en section critique
+File apres la demande : (Time: 1105,Site: 1) -> (Time: 1107,Site: 2) -> (Time: 1119,Site: 0)
+Message envoye : Requete 0 1119 vers pc5201a, 25566
+Message envoye : Requete 0 1119 vers pc5201m, 25567
+.-.
+Message recu : Reponse 2 1120
+-.
+Message recu : Reponse 1 1119
+.-....-..-..-.....
+Message recu : Liberation 1 1105
+File apres la libe: (Time: 1107,Site: 2) -> (Time: 1119,Site: 0)
+-.-...
+Message recu : Requete 1 1137
+File apres la demande : (Time: 1107,Site: 2) -> (Time: 1119,Site: 0) -> (Time: 1137,Site: 1)
+Message envoye : Reponse 0 1139 vers pc5201a, 25566
+.-.-....-.-..-.-.-..-.-.-..-..-.-...-..-....
+Message recu : Liberation 2 1107
+File apres la libe: (Time: 1119,Site: 0) -> (Time: 1137,Site: 1)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|.|.|.|....|.
+Message recu : Requete 2 1176
+File apres la demande : (Time: 1119,Site: 0) -> (Time: 1137,Site: 1) -> (Time: 1176,Site: 2)
+Message envoye : Reponse 0 1176 vers pc5201m, 25567
+|...|.|.|.|....|.|.|.|..|.|.|..|.|..|..|.|..
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 1119 vers pc5201a, 25566
+Message envoye : Liberation 0 1119 vers pc5201m, 25567
+File apres la sortie : (Time: 1137,Site: 1) -> (Time: 1176,Site: 2)
+..-..-..-.
+Demande d'entree en section critique
+File apres la demande : (Time: 1137,Site: 1) -> (Time: 1176,Site: 2) -> (Time: 1211,Site: 0)
+Message envoye : Requete 0 1211 vers pc5201a, 25566
+Message envoye : Requete 0 1211 vers pc5201m, 25567
+..
+Message recu : Reponse 2 1212
+-.
+Message recu : Reponse 1 1211
+-.-..
+Message recu : Liberation 1 1137
+File apres la libe: (Time: 1176,Site: 2) -> (Time: 1211,Site: 0)
+-...-.-.-.-..-..-...-.-.
+Message recu : Requete 1 1229
+File apres la demande : (Time: 1176,Site: 2) -> (Time: 1211,Site: 0) -> (Time: 1229,Site: 1)
+Message envoye : Reponse 0 1231 vers pc5201a, 25566
+-.-..-.....-...
+Message recu : Liberation 2 1176
+File apres la libe: (Time: 1211,Site: 0) -> (Time: 1229,Site: 1)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|....|.....|..
+Message recu : Requete 2 1253
+File apres la demande : (Time: 1211,Site: 0) -> (Time: 1229,Site: 1) -> (Time: 1253,Site: 2)
+Message envoye : Reponse 0 1253 vers pc5201m, 25567
+.|.|.|..|.|..|.|..|..|..|...|..|.|.|.|..|.|.|..
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 1211 vers pc5201a, 25566
+Message envoye : Liberation 0 1211 vers pc5201m, 25567
+File apres la sortie : (Time: 1229,Site: 1) -> (Time: 1253,Site: 2)
+.
+Demande d'entree en section critique
+File apres la demande : (Time: 1229,Site: 1) -> (Time: 1253,Site: 2) -> (Time: 1284,Site: 0)
+Message envoye : Requete 0 1284 vers pc5201a, 25566
+Message envoye : Requete 0 1284 vers pc5201m, 25567
+.-.
+Message recu : Reponse 2 1285
+.
+Message recu : Reponse 1 1284
+-..-....-.-..-.-.-....
+Message recu : Liberation 1 1229
+File apres la libe: (Time: 1253,Site: 2) -> (Time: 1284,Site: 0)
+-.-.-...-.
+Message recu : Requete 1 1305
+File apres la demande : (Time: 1253,Site: 2) -> (Time: 1284,Site: 0) -> (Time: 1305,Site: 1)
+Message envoye : Reponse 0 1307 vers pc5201a, 25566
+-....-.-.-........-.-.-.-..-.
+Message recu : Liberation 2 1253
+File apres la libe: (Time: 1284,Site: 0) -> (Time: 1305,Site: 1)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 1284 vers pc5201a, 25566
+Message envoye : Liberation 0 1284 vers pc5201m, 25567
+File apres la sortie : (Time: 1305,Site: 1)
+.
+Message recu : Requete 2 1330
+File apres la demande : (Time: 1305,Site: 1) -> (Time: 1330,Site: 2)
+Message envoye : Reponse 0 1330 vers pc5201m, 25567
+
+Demande d'entree en section critique
+File apres la demande : (Time: 1305,Site: 1) -> (Time: 1330,Site: 2) -> (Time: 1331,Site: 0)
+Message envoye : Requete 0 1331 vers pc5201a, 25566
+Message envoye : Requete 0 1331 vers pc5201m, 25567
+..-.
+Message recu : Reponse 2 1333
+-.
+Message recu : Reponse 1 1332
+..-..-....-..-..-.-..-.-.-.-....-...-.-.-..
+Message recu : Liberation 1 1305
+File apres la libe: (Time: 1330,Site: 2) -> (Time: 1331,Site: 0)
+-.
+Message recu : Liberation 2 1330
+File apres la libe: (Time: 1331,Site: 0)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 1331 vers pc5201a, 25566
+Message envoye : Liberation 0 1331 vers pc5201m, 25567
+File apres la sortie : 
+.-...
+Message recu : Requete 1 1366
+File apres la demande : (Time: 1366,Site: 1)
+Message envoye : Reponse 0 1369 vers pc5201a, 25566
+-.-.-.
+Message recu : Requete 2 1372
+File apres la demande : (Time: 1366,Site: 1) -> (Time: 1372,Site: 2)
+Message envoye : Reponse 0 1372 vers pc5201m, 25567
+.-..-.-.-..-.
+Demande d'entree en section critique
+File apres la demande : (Time: 1366,Site: 1) -> (Time: 1372,Site: 2) -> (Time: 1381,Site: 0)
+Message envoye : Requete 0 1381 vers pc5201a, 25566
+Message envoye : Requete 0 1381 vers pc5201m, 25567
+.
+Message recu : Liberation 1 1366
+File apres la libe: (Time: 1372,Site: 2) -> (Time: 1381,Site: 0)
+-.
+Message recu : Reponse 1 1381
+.
+Message recu : Reponse 2 1382
+-.....
+Message recu : Requete 1 1387
+File apres la demande : (Time: 1372,Site: 2) -> (Time: 1381,Site: 0) -> (Time: 1387,Site: 1)
+Message envoye : Reponse 0 1388 vers pc5201a, 25566
+.-...-.-.-.......-...-...
+Message recu : Liberation 2 1372
+File apres la libe: (Time: 1381,Site: 0) -> (Time: 1387,Site: 1)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+.|.|.|..|.....|.|..
+Message recu : Requete 2 1420
+File apres la demande : (Time: 1381,Site: 0) -> (Time: 1387,Site: 1) -> (Time: 1420,Site: 2)
+Message envoye : Reponse 0 1420 vers pc5201m, 25567
+|..|.|.|.|......
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 1381 vers pc5201a, 25566
+Message envoye : Liberation 0 1381 vers pc5201m, 25567
+File apres la sortie : (Time: 1387,Site: 1) -> (Time: 1420,Site: 2)
+.-..
+Message recu : Liberation 1 1387
+File apres la libe: (Time: 1420,Site: 2)
+-.
+Message recu : Requete 1 1434
+File apres la demande : (Time: 1420,Site: 2) -> (Time: 1434,Site: 1)
+Message envoye : Reponse 0 1435 vers pc5201a, 25566
+..-.
+Message recu : Liberation 2 1420
+File apres la libe: (Time: 1434,Site: 1)
+
+Demande d'entree en section critique
+File apres la demande : (Time: 1434,Site: 1) -> (Time: 1439,Site: 0)
+Message envoye : Requete 0 1439 vers pc5201a, 25566
+Message envoye : Requete 0 1439 vers pc5201m, 25567
+..
+Message recu : Reponse 1 1439
+-.
+Message recu : Reponse 2 1440
+.
+Message recu : Liberation 1 1434
+File apres la libe: (Time: 1439,Site: 0)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|.
+Message recu : Requete 2 1441
+File apres la demande : (Time: 1439,Site: 0) -> (Time: 1441,Site: 2)
+Message envoye : Reponse 0 1443 vers pc5201m, 25567
+|.|.
+Message recu : Requete 1 1444
+File apres la demande : (Time: 1439,Site: 0) -> (Time: 1441,Site: 2) -> (Time: 1444,Site: 1)
+Message envoye : Reponse 0 1445 vers pc5201a, 25566
+.....|..|.|..
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 1439 vers pc5201a, 25566
+Message envoye : Liberation 0 1439 vers pc5201m, 25567
+File apres la sortie : (Time: 1441,Site: 2) -> (Time: 1444,Site: 1)
+..
+Demande d'entree en section critique
+File apres la demande : (Time: 1441,Site: 2) -> (Time: 1444,Site: 1) -> (Time: 1458,Site: 0)
+Message envoye : Requete 0 1458 vers pc5201a, 25566
+Message envoye : Requete 0 1458 vers pc5201m, 25567
+..
+Message recu : Reponse 1 1458
+-.
+Message recu : Reponse 2 1459
+...-..-......-.-....-.-.-...-.-..-...-..-.-..-...-..-..-..-..-...-...
+Message recu : Liberation 2 1441
+File apres la libe: (Time: 1444,Site: 1) -> (Time: 1458,Site: 0)
+-..-.
+Message recu : Requete 2 1512
+File apres la demande : (Time: 1444,Site: 1) -> (Time: 1458,Site: 0) -> (Time: 1512,Site: 2)
+Message envoye : Reponse 0 1512 vers pc5201m, 25567
+....-..-.-.-.-.-.....-....-...-.-..-..-.-..
+Message recu : Liberation 1 1444
+File apres la libe: (Time: 1458,Site: 0) -> (Time: 1512,Site: 2)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|..
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 1458 vers pc5201a, 25566
+Message envoye : Liberation 0 1458 vers pc5201m, 25567
+File apres la sortie : (Time: 1512,Site: 2)
+....
+Demande d'entree en section critique
+File apres la demande : (Time: 1512,Site: 2) -> (Time: 1549,Site: 0)
+Message envoye : Requete 0 1549 vers pc5201a, 25566
+Message envoye : Requete 0 1549 vers pc5201m, 25567
+.
+Message recu : Requete 1 1547
+File apres la demande : (Time: 1512,Site: 2) -> (Time: 1547,Site: 1) -> (Time: 1549,Site: 0)
+Message envoye : Reponse 0 1549 vers pc5201a, 25566
+-.
+Message recu : Reponse 1 1549
+-.
+Message recu : Reponse 2 1551
+-.-..-.-.-..
+Message recu : Liberation 2 1512
+File apres la libe: (Time: 1547,Site: 1) -> (Time: 1549,Site: 0)
+-..-..-.
+Message recu : Requete 2 1563
+File apres la demande : (Time: 1547,Site: 1) -> (Time: 1549,Site: 0) -> (Time: 1563,Site: 2)
+Message envoye : Reponse 0 1563 vers pc5201m, 25567
+.-.....-.-..-.-.-..-...-.-...-..-..-.-.-..-.-.-..-....
+Message recu : Liberation 1 1547
+File apres la libe: (Time: 1549,Site: 0) -> (Time: 1563,Site: 2)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|.|.|.|.|.|.|..
+Message recu : Requete 1 1604
+File apres la demande : (Time: 1549,Site: 0) -> (Time: 1563,Site: 2) -> (Time: 1604,Site: 1)
+Message envoye : Reponse 0 1607 vers pc5201a, 25566
+|..|..|.|..|..|....|.|..|.|..|..|..|..|.....|.|.|.|.......
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 1549 vers pc5201a, 25566
+Message envoye : Liberation 0 1549 vers pc5201m, 25567
+File apres la sortie : (Time: 1563,Site: 2) -> (Time: 1604,Site: 1)
+.-.-.-.-..-.-.-....-.
+Demande d'entree en section critique
+File apres la demande : (Time: 1563,Site: 2) -> (Time: 1604,Site: 1) -> (Time: 1661,Site: 0)
+Message envoye : Requete 0 1661 vers pc5201a, 25566
+Message envoye : Requete 0 1661 vers pc5201m, 25567
+.-.
+Message recu : Reponse 1 1661
+-.
+Message recu : Reponse 2 1662
+-...-.-.....-.-.-..-..-..-...-...-.
+Message recu : Liberation 2 1563
+File apres la libe: (Time: 1604,Site: 1) -> (Time: 1661,Site: 0)
+..-.-.
+Message recu : Requete 2 1691
+File apres la demande : (Time: 1604,Site: 1) -> (Time: 1661,Site: 0) -> (Time: 1691,Site: 2)
+Message envoye : Reponse 0 1691 vers pc5201m, 25567
+..-..-...-.-.-..........-..-..-.-.-..-.-.-.-..-.-.-.-....-.-..-.-..-..-.-.-....-.-.-..-.-....-.-..
+Message recu : Liberation 1 1604
+File apres la libe: (Time: 1661,Site: 0) -> (Time: 1691,Site: 2)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|.|.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 1661 vers pc5201a, 25566
+Message envoye : Liberation 0 1661 vers pc5201m, 25567
+File apres la sortie : (Time: 1691,Site: 2)
+.
+Demande d'entree en section critique
+File apres la demande : (Time: 1691,Site: 2) -> (Time: 1760,Site: 0)
+Message envoye : Requete 0 1760 vers pc5201a, 25566
+Message envoye : Requete 0 1760 vers pc5201m, 25567
+..
+Message recu : Reponse 2 1761
+-.
+Message recu : Reponse 1 1760
+.
+Message recu : Requete 1 1761
+File apres la demande : (Time: 1691,Site: 2) -> (Time: 1760,Site: 0) -> (Time: 1761,Site: 1)
+Message envoye : Reponse 0 1763 vers pc5201a, 25566
+.
+Message recu : Liberation 2 1691
+File apres la libe: (Time: 1760,Site: 0) -> (Time: 1761,Site: 1)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+...|.|.|..|.
+Message recu : Requete 2 1772
+File apres la demande : (Time: 1760,Site: 0) -> (Time: 1761,Site: 1) -> (Time: 1772,Site: 2)
+Message envoye : Reponse 0 1772 vers pc5201m, 25567
+|.......
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 1760 vers pc5201a, 25566
+Message envoye : Liberation 0 1760 vers pc5201m, 25567
+File apres la sortie : (Time: 1761,Site: 1) -> (Time: 1772,Site: 2)
+.-.-.
+Demande d'entree en section critique
+File apres la demande : (Time: 1761,Site: 1) -> (Time: 1772,Site: 2) -> (Time: 1783,Site: 0)
+Message envoye : Requete 0 1783 vers pc5201a, 25566
+Message envoye : Requete 0 1783 vers pc5201m, 25567
+..
+Message recu : Reponse 2 1784
+.
+Message recu : Reponse 1 1783
+-.-.-.-.-.-..
+Message recu : Liberation 1 1761
+File apres la libe: (Time: 1772,Site: 2) -> (Time: 1783,Site: 0)
+.-.
+Message recu : Requete 1 1792
+File apres la demande : (Time: 1772,Site: 2) -> (Time: 1783,Site: 0) -> (Time: 1792,Site: 1)
+Message envoye : Reponse 0 1794 vers pc5201a, 25566
+-.-.....-..-.-...-.-.-....-.-.
+Message recu : Liberation 2 1772
+File apres la libe: (Time: 1783,Site: 0) -> (Time: 1792,Site: 1)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+.
+Message recu : Requete 2 1815
+File apres la demande : (Time: 1783,Site: 0) -> (Time: 1792,Site: 1) -> (Time: 1815,Site: 2)
+Message envoye : Reponse 0 1815 vers pc5201m, 25567
+..|.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 1783 vers pc5201a, 25566
+Message envoye : Liberation 0 1783 vers pc5201m, 25567
+File apres la sortie : (Time: 1792,Site: 1) -> (Time: 1815,Site: 2)
+...-.-.-.-.-.-.-.-.
+Demande d'entree en section critique
+File apres la demande : (Time: 1792,Site: 1) -> (Time: 1815,Site: 2) -> (Time: 1830,Site: 0)
+Message envoye : Requete 0 1830 vers pc5201a, 25566
+Message envoye : Requete 0 1830 vers pc5201m, 25567
+.-.
+Message recu : Reponse 2 1831
+-.
+Message recu : Reponse 1 1830
+-..-.....-..-.-..-.-..-.-.-.-....-.-.-.....-.-.-.-...-..-.........-....-..-..
+Message recu : Liberation 1 1792
+File apres la libe: (Time: 1815,Site: 2) -> (Time: 1830,Site: 0)
+-....
+Message recu : Requete 1 1887
+File apres la demande : (Time: 1815,Site: 2) -> (Time: 1830,Site: 0) -> (Time: 1887,Site: 1)
+Message envoye : Reponse 0 1890 vers pc5201a, 25566
+-..-.
+Message recu : Liberation 2 1815
+File apres la libe: (Time: 1830,Site: 0) -> (Time: 1887,Site: 1)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|.|..|.|.|.|..
+Message recu : Requete 2 1901
+File apres la demande : (Time: 1830,Site: 0) -> (Time: 1887,Site: 1) -> (Time: 1901,Site: 2)
+Message envoye : Reponse 0 1901 vers pc5201m, 25567
+|.|...|...|.|.|.|..|.|.|..|.|.|.|.|.|.|..|..|..|.|.|.|..|.|..|....|.|.|.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 1830 vers pc5201a, 25566
+Message envoye : Liberation 0 1830 vers pc5201m, 25567
+File apres la sortie : (Time: 1887,Site: 1) -> (Time: 1901,Site: 2)
+.-.-.
+Demande d'entree en section critique
+File apres la demande : (Time: 1887,Site: 1) -> (Time: 1901,Site: 2) -> (Time: 1948,Site: 0)
+Message envoye : Requete 0 1948 vers pc5201a, 25566
+Message envoye : Requete 0 1948 vers pc5201m, 25567
+.-.
+Message recu : Reponse 2 1949
+.
+Message recu : Reponse 1 1948
+-.
+Message recu : Liberation 1 1887
+File apres la libe: (Time: 1901,Site: 2) -> (Time: 1948,Site: 0)
+.-.-.-.
+Message recu : Requete 1 1953
+File apres la demande : (Time: 1901,Site: 2) -> (Time: 1948,Site: 0) -> (Time: 1953,Site: 1)
+Message envoye : Reponse 0 1955 vers pc5201a, 25566
+..-.-.-.-.......-..-.
+Message recu : Liberation 2 1901
+File apres la libe: (Time: 1948,Site: 0) -> (Time: 1953,Site: 1)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+|.
+Message recu : Requete 2 1971
+File apres la demande : (Time: 1948,Site: 0) -> (Time: 1953,Site: 1) -> (Time: 1971,Site: 2)
+Message envoye : Reponse 0 1971 vers pc5201m, 25567
+|.|.|.|.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 1948 vers pc5201a, 25566
+Message envoye : Liberation 0 1948 vers pc5201m, 25567
+File apres la sortie : (Time: 1953,Site: 1) -> (Time: 1971,Site: 2)
+.-..-......-.-.-.-.-..-..
+Demande d'entree en section critique
+File apres la demande : (Time: 1953,Site: 1) -> (Time: 1971,Site: 2) -> (Time: 1993,Site: 0)
+Message envoye : Requete 0 1993 vers pc5201a, 25566
+Message envoye : Requete 0 1993 vers pc5201m, 25567
+..
+Message recu : Reponse 2 1994
+-.
+Message recu : Reponse 1 1993
+-.-......-.-....-.-..-......-.-.....-.-..-...-..-.-...-.-..-..-.-.-.-.-.....-.-.-.-..-.-.-....-.-..-..-.-.-.-.-...-.-.-.-.-.-..
+Message recu : Liberation 1 1953
+File apres la libe: (Time: 1971,Site: 2) -> (Time: 1993,Site: 0)
+-...-..-.-..-.-.-...
+Message recu : Requete 1 2087
+File apres la demande : (Time: 1971,Site: 2) -> (Time: 1993,Site: 0) -> (Time: 2087,Site: 1)
+Message envoye : Reponse 0 2091 vers pc5201a, 25566
+-.
+Message recu : Liberation 2 1971
+File apres la libe: (Time: 1993,Site: 0) -> (Time: 2087,Site: 1)
+
+=========================================================
+=               Entree en section critique              =
+=========================================================
+On rentre en section critique
+.|...|...|.
+=========================================================
+=               Sortie de section critique              =
+=========================================================
+Message envoye : Liberation 0 1993 vers pc5201a, 25566
+Message envoye : Liberation 0 1993 vers pc5201m, 25567
+File apres la sortie : (Time: 2087,Site: 1)
+..-.
+Message recu : Requete 2 2103
+File apres la demande : (Time: 2087,Site: 1) -> (Time: 2103,Site: 2)
+Message envoye : Reponse 0 2103 vers pc5201m, 25567
+-.
